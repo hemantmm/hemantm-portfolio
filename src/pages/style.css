@@ -69,10 +69,10 @@
   opacity: 0.9 !important;
 }
 .logo {
-  background-image: url(../Assets/1490.gif);
+  background-image: url(../Assets/mainlogo-fotor-bg-remover-2023071214387.png);
   background-size: cover;
-  width: 90px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 .nav-link {
