@@ -74,6 +74,16 @@ function Header() {
           <Nav.Item>
             <NavLink
               className="nav-link"
+              to="https://github.com/oppia/oppia/issues?q=is%3Aissue+assignee%3Ahemantmm+is%3Aclosed"
+              onClick={() => updateExpanded(false)}
+            >
+              Contributions
+            </NavLink>
+          </Nav.Item>
+
+          <Nav.Item>
+            <NavLink
+              className="nav-link"
               to="/contact"
               onClick={() => updateExpanded(false)}
             >
