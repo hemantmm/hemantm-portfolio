@@ -3,7 +3,7 @@ import '../../pages/style.css'
 import ProjectCard from './ProjectCard'
 import { Container,Row, Col } from 'react-bootstrap'
 import logo1 from '../../Assets/blogPostImage.png'
-import logo2 from '../../Assets/shipCartImage.png'
+import logo2 from '../../Assets/shopCartImage.png'
 import logo3 from '../../Assets/cryptoUpdateImage.png'
 
 
@@ -17,10 +17,10 @@ function Projectlist() {
               <ProjectCard
                 imgPath={logo2}
                 isBlog={false}
-                title="Ship Cart 🛍️"
-                description="Ship Cart is an online shopping app that provides users in India with a hassle-free way to shop for products from the US and have them delivered to their doorstep."
-                vdLink="https://ship-cart-cn8q.vercel.app/"
-                ghLink="https://github.com/hemantmm/Ship-Cart"
+                title="Shop Cart 🛍️"
+                description="Shop Cart is an online shopping app that provides users in India with a hassle-free way to shop for products from the US and have them delivered to their doorstep."
+                vdLink="https://shop-cart-fawn.vercel.app/"
+                ghLink="https://github.com/hemantmm/ShopCart"
               />
             </Col>
 

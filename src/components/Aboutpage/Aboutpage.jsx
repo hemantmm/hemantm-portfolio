@@ -16,12 +16,14 @@ function Aboutpage() {
                                 <Col md={7}>
                                     <li>HTML5/CSS3</li>
                                     <li>JavaScript</li>
+                                    <li>TypeScript</li>
                                     <li>Bootsrap 5</li>
                                 </Col>
                                 <Col md={5}>
                                     <li>React Js</li>
+                                    <li>Next Js</li>
                                     <li>React-Bootsrap</li>
-                                    <li>Material-ui</li>
+                                    <li>Material-UI</li>
                                     <li>Git/Github</li>
                                 </Col>
                             </Row>
