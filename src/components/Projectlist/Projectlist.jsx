@@ -17,7 +17,7 @@ function Projectlist() {
               <ProjectCard
                 imgPath={logo2}
                 isBlog={false}
-                title="Shop Cart 🛍️"
+                title="SHOP CART 🛍️"
                 description="Shop Cart is an online shopping app that provides users in India with a hassle-free way to shop for products from the US and have them delivered to their doorstep."
                 vdLink="https://shop-cart-fawn.vercel.app/"
                 ghLink="https://github.com/hemantmm/ShopCart"
@@ -28,7 +28,7 @@ function Projectlist() {
               <ProjectCard
                 imgPath={logo3}
                 isBlog={false}
-                title="Crypto Update 🪙"
+                title="CRYPTO UPDATE 🪙"
                 description="CRYPTO UPDATE IS A CRYPTO APP THAT ALLOWS USERS TO SEARCH FOR INFORMATION ABOUT VARIOUS CRYPTOCURRENCIES IN REAL-TIME."
                 vdLink="https://crypto-market-rp67.vercel.app/"
                 ghLink="https://github.com/hemantmm/CryptoMarket"
@@ -39,10 +39,10 @@ function Projectlist() {
               <ProjectCard
                 imgPath={logo1}
                 isBlog={true}
-                title="BLOG POST 📝"
-                description="Blog Post App is a web-based application that allows users to create and publish blog posts. It provides a user-friendly interface for creating posts. With this app, users can easily share their thoughts, ideas, and experiences with the world through their own personal blog."
-                vdLink="https://blog-post-git-master-hemantmm.vercel.app/"
-                ghLink="https://github.com/hemantmm/BlogPost"
+                title="SORTING VISUALIZER"
+                description="This project sorting visualizer is a very simple UI and it allows the users to select the algorithm and the speed of the visualization."
+                vdLink="https://sorting-visualizer-hemantmms-projects.vercel.app/"
+                ghLink="https://github.com/hemantmm/sorting-visualizer"
               />
             </Col>
 
