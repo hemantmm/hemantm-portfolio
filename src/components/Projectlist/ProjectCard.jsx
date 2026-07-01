@@ -1,43 +1,41 @@
-import React from 'react'
-import { Button, Card } from 'react-bootstrap'
-import {BsBoxArrowUpRight} from 'react-icons/bs'
-import {AiFillGithub } from 'react-icons/ai'
+import React from "react";
+import { Card } from "react-bootstrap";
+import { BsBoxArrowUpRight } from "react-icons/bs";
+import { AiFillGithub } from "react-icons/ai";
 
 function ProjectCard(props) {
   return (
-    <Card className='project-card-view'>
-      <Card.Img variant='top' src={props.imgPath} alt='card-img' />
+    <Card className="project-card-view">
+      <Card.Img variant="top" src={props.imgPath} alt={`${props.title} preview`} />
       <Card.Body>
-        <Card.Title style={{textAlign:"center", fontSize:"25px"}}>{props.title}</Card.Title>
-        <Card.Text style={{textAlign:"justify"}}>
-          {props.description}
-        </Card.Text>
-        <Button className='viewbtn' variant='primary' href={props.vdLink} target='_blank'>
-          Demo
-          <BsBoxArrowUpRight style={{marginLeft:"5px"}} />
-        </Button>
-        <Button className='viewbtn btn2' variant='primary' href={props.ghLink} target='_blank1'>
-          Code
-          <AiFillGithub style={{marginLeft:"5px"}} />
-        </Button>
-        {/* {"/n"}
-        {"/n"} */}
-
-
-        {/* {!props.isBlog && props.demoLink  &&(
-          <Button
-          variant='primary'
-          href={props.demoLink}
-          target='_blank'
-          style={{marginLeft:"10px"}}
+        <div className="project-card-header">
+          <Card.Title>{props.title}</Card.Title>
+          <span>{props.category}</span>
+        </div>
+        <Card.Text>{props.description}</Card.Text>
+        <div className="project-tech">
+          {props.tech.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+        <div className="project-actions">
+          <a className="viewbtn" href={props.vdLink} target="_blank" rel="noreferrer">
+            Live Demo
+            <BsBoxArrowUpRight aria-hidden="true" />
+          </a>
+          <a
+            className="viewbtn"
+            href={props.ghLink}
+            target="_blank"
+            rel="noreferrer"
           >
-            {"Demo"}
-          </Button>
-        )} */}
-        
+            Code
+            <AiFillGithub aria-hidden="true" />
+          </a>
+        </div>
       </Card.Body>
     </Card>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

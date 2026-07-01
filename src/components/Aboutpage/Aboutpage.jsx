@@ -1,41 +1,83 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { FiCheckCircle } from "react-icons/fi";
+
+const skills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "MongoDB",
+  "Python",
+  "Bootstrap",
+  "Material UI",
+  "Git",
+  "GitHub",
+];
+
+const strengths = [
+  "Translate product ideas into responsive, polished interfaces.",
+  "Write component-based React code that is easier to maintain.",
+  "Care about accessibility, visual hierarchy, and performance.",
+];
 
 function Aboutpage() {
   return (
     <div className="aboutpagebackground">
-      <Container>
-        <Row className='textbackground'>
-        <Col md={7} >
-                        <h3 className='aboutmetext'>About <span>Me</span></h3>
-                        <p className='aboutdetails'>I'm a self-taught Front End developer from India. I build websites with a focus on providing the experience for everyone using them and responsiveness. Curious to learn more about developing scalable distribution systems, love problem solving, and care about writing and maintainable code. A responsive design makes your website accessible to all users, regardless of their devices.
-                        </p>
-                        <ul className='skilllist'>
-                            <Row>
-                                <h3>Skills</h3>
-                                <Col md={7}>
-                                    <li>HTML5/CSS3</li>
-                                    <li>JavaScript</li>
-                                    <li>TypeScript</li>
-                                    <li>Bootsrap 5</li>
-                                </Col>
-                                <Col md={5}>
-                                    <li>React Js</li>
-                                    <li>Next Js</li>
-                                    <li>React-Bootsrap</li>
-                                    <li>Material-UI</li>
-                                    <li>Git/Github</li>
-                                </Col>
-                            </Row>
-                        </ul>
-                    </Col>
-                    <Col md={5}>
-                        <div className="webimage"></div>
-                    </Col>
+      <Container className="page-container">
+        <Row className="about-panel align-items-center">
+          <Col lg={7}>
+            <p className="eyebrow">About Me</p>
+            <h1 className="section-title">
+              I enjoy building interfaces that feel sharp, useful, and dependable.
+            </h1>
+            <p className="aboutdetails">
+              I am a self-taught frontend developer from India with hands-on
+              experience building React applications, project dashboards, and
+              responsive product pages. My work is guided by simple priorities:
+              clear structure, polished interaction, and code that another
+              developer can comfortably build on.
+            </p>
+
+            <div className="strength-list">
+              {strengths.map((strength) => (
+                <div className="strength-item" key={strength}>
+                  <FiCheckCircle aria-hidden="true" />
+                  <span>{strength}</span>
+                </div>
+              ))}
+            </div>
+          </Col>
+          <Col lg={5}>
+            <div className="about-visual">
+              <div className="webimage" aria-hidden="true"></div>
+              <div className="profile-note">
+                <strong>Currently focused on</strong>
+                <span>React, frontend architecture, and real-world UI polish.</span>
+              </div>
+            </div>
+          </Col>
         </Row>
+
+        <section className="skills-section" aria-labelledby="skills-title">
+          <div>
+            <p className="eyebrow">Toolkit</p>
+            <h2 id="skills-title">Skills I bring to the team</h2>
+          </div>
+          <div className="skill-grid">
+            {skills.map((skill) => (
+              <span className="skill-pill" key={skill}>
+                {skill}
+              </span>
+            ))}
+          </div>
+        </section>
       </Container>
     </div>
-  )
+  );
 }
 
-export default Aboutpage
+export default Aboutpage;

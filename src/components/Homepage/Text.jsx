@@ -1,22 +1,12 @@
-import React from 'react'
-import '../../pages/style.css';
-// import Typewriter from "typewriter-effect";
+import React from "react";
+import "../../pages/style.css";
 
 function Text() {
   return (
-    <></>
-    // <Typewriter
-    //   options={{
-    //     strings: [
-    //       "React Js Developer",
-    //       "Front End Developer",
-    //     ],
-    //     autoStart: true,
-    //     loop: true,
-    //     deleteSpeed: 50,
-    //   }}
-    // />
-  )
+    <p className="role-line">
+      React developer / UI builder / problem solver
+    </p>
+  );
 }
 
-export default Text
+export default Text;

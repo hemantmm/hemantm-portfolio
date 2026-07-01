@@ -1,22 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, NavLink } from "react-router-dom";
+import { FiArrowUpRight } from "react-icons/fi";
 import "../../pages/style.css";
 
 function Header() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
+  useEffect(() => {
+    function scrollHandler() {
+      updateNavbar(window.scrollY >= 20);
     }
-  }
 
-  window.addEventListener("scroll", scrollHandler);
+    scrollHandler();
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
 
   return (
     <Navbar
@@ -25,8 +27,9 @@ function Header() {
       expand="md"
       className={navColour ? "sticky" : "navbar"}
     >
-      <Navbar.Brand className="logotext" as={Link} to="/">
-        <div className="logo"></div>
+      <Navbar.Brand className="brand-lockup" as={Link} to="/">
+        <div className="logo" aria-hidden="true"></div>
+        <span>Hemant M</span>
       </Navbar.Brand>
 
       <Navbar.Toggle
@@ -72,35 +75,26 @@ function Header() {
           </Nav.Item>
 
           <Nav.Item>
-            <NavLink
+            <Nav.Link
               className="nav-link"
-              to="https://github.com/oppia/oppia/issues?q=is%3Aissue+assignee%3Ahemantmm+is%3Aclosed"
+              href="https://github.com/oppia/oppia/issues?q=is%3Aissue+assignee%3Ahemantmm+is%3Aclosed"
+              target="_blank"
+              rel="noreferrer"
               onClick={() => updateExpanded(false)}
             >
-              Contributions
-            </NavLink>
+              Contributions <FiArrowUpRight aria-hidden="true" />
+            </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
             <NavLink
-              className="nav-link"
+              className="nav-link nav-cta"
               to="/contact"
               onClick={() => updateExpanded(false)}
             >
               Contact
             </NavLink>
           </Nav.Item>
-
-          {/* <Button
-            onClick={() => {
-              window.open(
-                ""
-              );
-            }}
-            className="resumebtn"
-          >
-            <span>Resume</span>
-          </Button> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
